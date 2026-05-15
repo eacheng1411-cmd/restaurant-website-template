@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu — Sakura Omakase</title>
+  <meta name="description" content="Explore Sakura Omakase's full menu — omakase sets, nigiri, sashimi, A5 Wagyu, desserts, and premium sake selections. Prices in USD." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect fill='%23080808' width='32' height='32'/><text y='24' x='4' font-size='22'>🌸</text></svg>" />
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><span class="nav-logo-en">Sakura Omakase</span><span class="nav-logo-jp">桜 おまかせ</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+        <li><a href="menu.html" class="active">Menu</a></li>
+        <li><a href="reservation.html">Reservations</a></li><li><a href="contact.html">Contact</a></li>
+        <li><a href="reservation.html" class="btn btn-outline nav-reserve"><span>Reserve a Table</span></a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div id="mobile-menu">
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="menu.html">Menu</a>
+  <a href="reservation.html">Reservations</a><a href="contact.html">Contact</a>
+  <a href="reservation.html" class="btn btn-primary mobile-reserve"><span>Reserve a Table</span></a>
+</div>
+
+<section class="menu-hero">
+  <div class="container">
+    <div class="menu-hero-content page-hero-content">
+      <span class="section-label">The Menu</span>
+      <h1>Crafted with <em class="text-gold italic">Intention</em></h1>
+      <p style="color:var(--text-muted); margin-top:0.8rem;">Every item reflects the season, the craft, and the sea. Prices are in USD.</p>
+    </div>
+  </div>
+</section>
+
+<div class="menu-tabs">
+  <div class="container">
+    <div class="menu-tabs-inner">
+      <button class="tab-btn active" data-target="all">All</button>
+      <button class="tab-btn" data-target="omakase">Omakase Sets</button>
+      <button class="tab-btn" data-target="appetizer">Appetizers</button>
+      <button class="tab-btn" data-target="sashimi">Sashimi</button>
+      <button class="tab-btn" data-target="sushi">Nigiri & Rolls</button>
+      <button class="tab-btn" data-target="mains">Hot Mains</button>
+      <button class="tab-btn" data-target="dessert">Desserts</button>
+      <button class="tab-btn" data-target="drinks">Sake & Drinks</button>
+    </div>
+  </div>
+</div>
+
+<div id="order" class="order-banner">
+  <div class="container">
+    <div class="order-banner-inner">
+      <div>
+        <p><strong>Online Takeout & Delivery Available</strong> — Order our signature rolls, sashimi platters, and omakase bento boxes for delivery within Manhattan.</p>
+        <p style="margin-top:0.3rem; font-size:0.78rem;">Delivery hours: Tue–Sun, 5 PM – 9 PM · Minimum order: $85</p>
+      </div>
+      <div style="display:flex; gap:0.8rem; flex-wrap:wrap;">
+        <a href="#" class="btn btn-primary" style="font-size:0.65rem; padding:0.75rem 1.5rem;"><span>Order Now</span></a>
+        <button class="btn btn-whatsapp" data-whatsapp style="font-size:0.65rem; padding:0.75rem 1.5rem;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span>Order via WhatsApp</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" style="padding-top:1rem; padding-bottom:4rem;">
+
+  <div id="omakase" class="menu-section" data-category="omakase">
+    <div class="menu-section-header"><h2>Omakase Sets</h2><span>おまかせセット</span></div>
+    <div class="omakase-feature reveal">
+      <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=800&q=80" alt="Signature Omakase" loading="lazy" />
+      <div class="omakase-feature-body">
+        <span class="section-label">Signature</span>
+        <h3>Sakura Omakase</h3>
+        <p style="font-size:0.82rem; color:var(--text-muted);">18-course chef's tasting — our full expression of the season.</p>
+        <div class="omakase-price">$295 <small>per person</small></div>
+        <div class="omakase-courses">
+          <div class="course-line">Seasonal Amuse-Bouche (3 bites)</div>
+          <div class="course-line">Cold Appetizer — house-cured selection</div>
+          <div class="course-line">Sashimi Course — 5 grades, daily sourced</div>
+          <div class="course-line">Nigiri Progression — 8 pieces, eldest to youngest</div>
+          <div class="course-line">A5 Wagyu Intermezzo</div>
+          <div class="course-line">Seasonal Miso & Rice</div>
+          <div class="course-line">Wagashi Dessert Course</div>
+        </div>
+        <div style="display:flex; gap:0.8rem; flex-wrap:wrap; margin-top:1.5rem;">
+          <a href="reservation.html" class="btn btn-primary" style="font-size:0.65rem; padding:0.75rem 1.5rem;"><span>Reserve for This Menu</span></a>
+          <span class="tag tag-special">Chef's Special</span>
+          <span class="tag tag-gf">Gluten-Free Option</span>
+        </div>
+      </div>
+    </div>
+    <div class="menu-items-grid" style="margin-top:1.5px; background:var(--border-soft);">
+      <div class="menu-item reveal">
+        <div class="menu-item-img"><img src="https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=300&q=80" alt="Kaiseki Set" loading="lazy" /></div>
+        <div class="menu-item-body">
+          <div class="menu-item-top"><div class="menu-item-name">Kaiseki Set<small>会席セット</small></div><span class="menu-item-price">$185</span></div>
+          <p class="menu-item-desc">12-course seasonal Japanese kaiseki. Lighter, more vegetable-forward. Ideal for first-time omakase guests.</p>
+          <div class="menu-tags"><span class="tag tag-special">Recommended</span><span class="tag tag-veg">Veg Option</span></div>
+        </div>
+      </div>
+      <div class="menu-item reveal reveal-delay-2">
+        <div class="menu-item-img"><img src="https://images.unsplash.com/photo-1611143669185-af224c5e3252?w=300&q=80" alt="Sushi Omakase" loading="lazy" /></div>
+        <div class="menu-item-body">
+          <div class="menu-item-top"><div class="menu-item-name">Sushi Omakase<small>寿司おまかせ</small></div><span class="menu-item-price">$220</span></div>
+          <p class="menu-item-desc">14 nigiri pieces + 2 hand rolls, selected by the chef. Pure edomae tradition, nothing extraneous.</p>
+          <div class="menu-tags"><span class="tag tag-special">Chef's Special</span><span class="tag tag-gf">Gluten-Free</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="appetizer" class="menu-section" data-category="appetizer">
+    <div class="menu-section-header"><h2>Appetizers</h2><span>前菜</span></div>
+    <div class="menu-items-grid">
+      <div class="menu-item reveal"><div class="menu-item-img"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=300&q=80" alt="Edamame" loading="lazy" /></div><div class="menu-item-body"><div class="menu-item-top"><div class="menu-item-name">Salted Edamame<small>塩枝豆</small></div><span class="menu-item-price">$9</span></div><p class="menu-item-desc">Steamed organic edamame with Himalayan pink salt and yuzu zest.</p><div class="menu-tags"><span class="tag tag-veg">Vegetarian</span><span class="tag tag-gf">Gluten-Free</span></div></div></div>
+      <div class="menu-item reveal reveal-delay-1"><div class="menu-item-img"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=300&q=80" alt="Gyoza" loading="lazy" /></div><div class="menu-item-body"><div class="menu-item-top"><div class="menu-item-name">Truffle Gyoza<small>トリュフ饣子</small></div><span class="menu-item-price">$22</span></div><p class="menu-item-desc">Pan-fried pork and black truffle dumplings with aged ponzu dipping sauce.</p><div class="menu-tags"><span class="tag tag-special">Chef's Special</span></div></div></div>
+      <div class="menu-item reveal reveal-delay-2"><div class="menu-item-img"><img src="https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=300&q=80" alt="Agedashi Tofu" loading="lazy" /></div><div class="menu-item-body"><div class="menu-item-top"><div class="menu-item-name">Agedashi Tofu<small>揚げ出し豆腐</small></div><span class="menu-item-price">$16</span></div><p class="menu-item-desc">Silken tofu in a dashi broth with grated daikon and shiso tempura flakes.</p><div class="menu-tags"><span class="tag tag-veg">Vegetarian</span></div></div></div>
+      <div class="menu-item reveal reveal-delay-3"><div class="menu-item-img"><img src="https://images.unsplash.com/photo-1580822184713-fc5400e7fe10?w=300&q=80" alt="Chawanmushi" loading="lazy" /></div><div class="menu-item-body"><div class="menu-item-top"><div class="menu-item-name">Uni Chawanmushi<small>雲丹茶炕蒸し</small></div><span class="menu-item-price">$28</span></div><p class="menu-item-desc">Silky steamed egg custard topped with Hokkaido sea urchin, ikura, and dashi foam.</p><div class="menu-tags"><span class="tag tag-special">Chef's Special</span><span class="tag tag-gf">Gluten-Free</span></div></div></div>
+      <div class="menu-item reveal"><div class="menu-item-img"><img src="https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=300&q=80" alt="Miso Soup" loading="lazy" /></div><div class="menu-item-body"><div class="menu-item-top"><div class="menu-item-name">Signature Miso Soup<small>特製味噌汁</small></div><span class="menu-item-price">$12</span></div><p class="menu-item-desc">Red and white miso blended with dashi, soft tofu, wakame, and seasonal mushrooms.</p><div class="menu-tags"><span class="tag tag-veg">Vegetarian</span><span class="tag tag-gf">Gluten-Free</span></div></div></div>
+      <div class="menu-item reveal reveal-delay-1"><div class="menu-item-img"><img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=300&q=80" alt="Hamachi Crudo" loading="lazy" /></div><div class="menu-item-body"><div class="menu-item-top"><div class="menu-item-name">Hamachi Crudo<small>ハマチクルード</small></div><span class="menu-item-price">$32</span></div><p class="menu-item-desc">Thinly sliced yellowtail with yuzu kosho vinaigrette, micro shiso, and crispy shallots.</p><div class="menu-tags"><span class="tag tag-special">Seasonal</span><span class="tag tag-gf">Gluten-Free</span></div></div></div>
+    </div>
+  </div>
+
+  <div id="sashimi" class="menu-section" data-category="sashimi">
+    <div class="menu-section-header"><h2>Sashimi</h2><span>刺身</span></div>
+    <div class="menu-items-grid">
+      <div class="menu-item reveal"><div class="menu-item-img"><img src="https://images.unsplash.com/photo-1611143669185-af224c5e3252?w=300&q=80" alt="Otoro" loading="lazy" /></div><div class="menu-item-body"><div class="menu-item-top"><div class="menu-item-name">Otoro Sashimi<small>大トロ刺身</small></div><span class="menu-item-price">$48 / 3pc</span></div><p class="menu-item-desc">Fatty bluefin tuna belly from the Tsukiji market, served with freshly grated wasabi and housemade soy.</p><div class="menu-tags"><span class="tag tag-special">Chef's Special</span><span class="tag tag-gf">Gluten-Free</span></div></div></div>
+      <div class="menu-item reveal reveal-delay-1"><div class="menu-item-img"><img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=300&q=80" alt="Salmon" loading="lazy" /></div><div class="menu-item-body"><div class="menu-item-top"><div class="menu-item-name">King Salmon Sashimi<small>サーモン刺身</small></div><span class="menu-item-price">$26 / 3pc</span></div><p class="menu-item-desc">Wild-caught Alaskan king salmon, exceptionally rich in natural fat. Served without sauce.</p><div class="menu-tags"><span class="tag tag-gf">Gluten-Free</span></div></div></div>
+      <div class="menu-item reveal reveal-delay-2"><div class="menu-item-img"><img src="https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=300&q=80" alt="Uni" loading="lazy" /></div><div class="menu-item-body"><div class="menu-item-top"><div class="menu-item-name">Hokkaido Uni<small>北海道雲丹</small></div><span class="menu-item-price">Market Price</span></div><p class="menu-item-desc">Murasaki or bafun uni from Hokkaido, served on a seaweed mat with sea salt and lemon.</p><div class="menu-tags"><span class="tag tag-special">Seasonal</span><span class="tag tag-gf">Gluten-Free</span></div></div></div>
+      <div class="menu-item reveal reveal-delay-3"><div class="menu-item-img"><img src="https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=300&q=80" alt="Scallop" loading="lazy" /></div><div class="menu-item-body"><div class="menu-item-top"><div class="menu-item-name">Hotate Sashimi<small>帆立刺身</small></div><span class="menu-item-price">$32 / 3pc</span></div><p class="menu-item-desc">Hokkaido giant scallop, sliced thin, with yuzu oil and shiso chiffonade.</p><div class="menu-tags"><span class="tag tag-gf">Gluten-Free</span></div></div></div>
+      <div class="menu-item reveal"><div class="menu-item-img"><img src="https://images.unsplash.com/photo-1580822184713-fc5400e7fe10?w=300&q=80" alt="Deluxe Platter" loading="lazy" /></div><div class="menu-item-body"><div class="menu-item-top"><div class="menu-item-name">Sashimi Omakase Platter<small>刺身おまかせ盛</small></div><span class="menu-item-price">$95 / person</span></div><p class="menu-item-desc">Chef's selection of 12 pieces — the finest fish available today.</p><div class="menu-tags"><span class="tag tag-special">Chef's Selection</span><span class="tag tag-gf">Gluten-Free</span></div></div></div>
+      <div class="menu-item reveal reveal-delay-1"><div class="menu-item-img"><img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=300&q=80" alt="Hamachi" loading="lazy" /></div><div class="menu-item-body"><div class="menu-item-top"><div class="menu-item-name">Hamachi Sashimi<small>ハマチ刺身</small></div><span class="menu-item-price">$22 / 3pc</span></div><p class="menu-item-desc">Japanese yellowtail with a citrus ponzu drizzle and pickled ginger.</p><div class="menu-tags"><span class="tag tag-gf">Gluten-Free</span></div></div></div>
+    </div>
+  </div>
+
+  <div id="sushi" class="menu-section" data-category="sushi">
+    <div class="menu-section-header"><h2>Nigiri & Rolls</h2><span>握り寿司・巻物</span></div>
+    <div class="menu-items-grid">
+      <div class="menu-item reveal"><div class="menu-item-img"><img src="https://images.unsplash.com/photo-1611143669185-af224c5e3252?w=300&q=80" alt="Otoro Nigiri" loading="lazy" /></div><div class="menu-item-body"><div class="menu-item-top"><div class="menu-item-name">Otoro Nigiri<small>大トロ握り</small></div><span class="menu-item-price">$28 / pc</span></div><p class="menu-item-desc">Fatty bluefin belly over seasoned shari rice. Minimal intervention — maximum flavor.</p><div class="menu-tags"><span class="tag tag-special">Chef's Special</span></div></div></div>
+      <div class="menu-item reveal reveal-delay-1"><div class="menu-item-img"><img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=300&q=80" alt="Salmon Nigiri" loading="lazy" /></div><div class="menu-item-body"><div class="menu-item-top"><div class="menu-item-name">King Salmon Nigiri<small>サーモン握り</small></div><span class="menu-item-price">$14 / pc</span></div><p class="menu-item-desc">Wild Alaskan king salmon with a touch of sea salt and house-aged soy.</p><div class="menu-tags"><span class="tag tag-gf">Gluten-Free</span></div></div></div>
+      <div class="menu-item reveal reveal-delay-2"><div class="menu-item-img"><img src="https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=300&q=80" alt="Uni Gunkan" loading="lazy" /></div><div class="menu-item-body"><div class="menu-item-top"><div class="menu-item-name">Uni Gunkan<small>雲丹軍艦</small></div><span class="menu-item-price">Market Price</span></div><p class="menu-item-desc">Fresh Hokkaido sea urchin wrapped in nori, over warm vinegared rice.</p><div class="menu-tags"><span class="tag tag-special">Seasonal</span></div></div></div>
+      <div class="menu-item reveal reveal-delay-3"><div class="menu-item-img"><img src="https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=300&q=80" alt="Spicy Roll" loading="lazy" /></div><div class="menu-item-body"><div class="menu-item-top"><div class="menu-item-name">Spicy Otoro Roll<small>辛口大トロ巻き</small></div><span class="menu-item-price">$38</span></div><p class="menu-item-desc">Minced otoro with Kyoto togarashi aioli, cucumber, and tobiko in a tempura nori roll.</p><div class="menu-tags"><span class="tag tag-spicy">Spicy</span><span class="tag tag-special">Signature</span></div></div></div>
+      <div class="menu-item reveal"><div class="menu-item-img"><img src="https://images.unsplash.com/photo-1580822184713-fc5400e7fe10?w=300&q=80" alt="Signature Roll" loading="lazy" /></div><div class="menu-item-body"><div class="menu-item-top"><div class="menu-item-name">Sakura Signature Roll<small>桜特製巻き</small></div><span class="menu-item-price">$52</span></div><p class="menu-item-desc">A5 Wagyu tataki, truffle, shaved gold leaf, and crispy shallots — our most lavish creation.</p><div class="menu-tags"><span class="tag tag-special">House Signature</span></div></div></div>
+      <div class="menu-item reveal reveal-delay-1"><div class="menu-item-img"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=300&q=80" alt="Veggie Roll" loading="lazy" /></div><div class="menu-item-body"><div class="menu-item-top"><div class="menu-item-name">Garden Futomaki<small>野菜太巻き</small></div><span class="menu-item-price">$24</span></div><p class="menu-item-desc">Thick roll with pickled burdock, shiso, avocado, sweet egg and cucumber — a vegetarian classic.</p><div class="menu-tags"><span class="tag tag-veg">Vegetarian</span></div></div></div>
+    </div>
+  </div>
+
+  <div id="mains" class="menu-section" data-category="mains">
+    <div class="menu-section-header"><h2>Hot Mains</h2><span>温かい料理</span></div>
+    <div class="menu-items-grid">
+      <div class="menu-item reveal"><div class="menu-item-img"><img src="https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=300&q=80" alt="Wagyu" loading="lazy" /></div><div class="menu-item-body"><div class="menu-item-top"><div class="menu-item-name">A5 Wagyu Tataki<small>A5和牛たたき</small></div><span class="menu-item-price">$78</span></div><p class="menu-item-desc">Miyazaki A5 striploin, seared tableside on a stone, with ponzu, wasabi, and pickled daikon.</p><div class="menu-tags"><span class="tag tag-special">Chef's Special</span><span class="tag tag-gf">Gluten-Free</span></div></div></div>
+      <div class="menu-item reveal reveal-delay-1"><div class="menu-item-img"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=300&q=80" alt="Black Cod" loading="lazy" /></div><div class="menu-item-body"><div class="menu-item-top"><div class="menu-item-name">Miso Black Cod<small>銀鰹西京焼き</small></div><span class="menu-item-price">$52</span></div><p class="menu-item-desc">72-hour miso-marinated Alaskan black cod, oven-roasted, with yuzu beurre blanc and bok choy.</p><div class="menu-tags"><span class="tag tag-special">House Classic</span><span class="tag tag-gf">Gluten-Free</span></div></div></div>
+      <div class="menu-item reveal reveal-delay-2"><div class="menu-item-img"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=300&q=80" alt="Lobster Ramen" loading="lazy" /></div><div class="menu-item-body"><div class="menu-item-top"><div class="menu-item-name">Lobster Miso Ramen<small>伊勢海老ラーメン</small></div><span class="menu-item-price">$62</span></div><p class="menu-item-desc">Half Maine lobster in a 12-hour lobster-dashi miso broth, with hand-pulled noodles and ikura.</p><div class="menu-tags"><span class="tag tag-special">Seasonal</span></div></div></div>
+      <div class="menu-item reveal reveal-delay-3"><div class="menu-item-img"><img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=300&q=80" alt="Mushroom Rice" loading="lazy" /></div><div class="menu-item-body"><div class="menu-item-top"><div class="menu-item-name">Truffle Mushroom Gohan<small>トリュフ茹ご飯</small></div><span class="menu-item-price">$38</span></div><p class="menu-item-desc">Clay pot rice with matsutake, maitake, and shiitake, finished with black truffle oil and sea salt.</p><div class="menu-tags"><span class="tag tag-veg">Vegetarian</span><span class="tag tag-gf">Gluten-Free</span></div></div></div>
+    </div>
+  </div>
+
+  <div id="dessert" class="menu-section" data-category="dessert">
+    <div class="menu-section-header"><h2>Desserts</h2><span>デザート</span></div>
+    <div class="menu-items-grid">
+      <div class="menu-item reveal"><div class="menu-item-img"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=300&q=80" alt="Mochi" loading="lazy" /></div><div class="menu-item-body"><div class="menu-item-top"><div class="menu-item-name">Seasonal Mochi Trio<small>季節の餅三種</small></div><span class="menu-item-price">$18</span></div><p class="menu-item-desc">Three artisan mochi: black sesame, yuzu-matcha, and seasonal fruit. Handmade daily by Chef Mori.</p><div class="menu-tags"><span class="tag tag-veg">Vegetarian</span><span class="tag tag-gf">Gluten-Free</span></div></div></div>
+      <div class="menu-item reveal reveal-delay-1"><div class="menu-item-img"><img src="https://images.unsplash.com/photo-1580822184713-fc5400e7fe10?w=300&q=80" alt="Matcha" loading="lazy" /></div><div class="menu-item-body"><div class="menu-item-top"><div class="menu-item-name">Matcha Panna Cotta<small>抒茶パンナコッタ</small></div><span class="menu-item-price">$16</span></div><p class="menu-item-desc">Ceremonial grade matcha from Uji, with kuromitsu syrup, tsubuan, and kinako dust.</p><div class="menu-tags"><span class="tag tag-veg">Vegetarian</span><span class="tag tag-gf">Gluten-Free</span></div></div></div>
+      <div class="menu-item reveal reveal-delay-2"><div class="menu-item-img"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=300&q=80" alt="Yuzu Tart" loading="lazy" /></div><div class="menu-item-body"><div class="menu-item-top"><div class="menu-item-name">Yuzu Citrus Tart<small>柚子タルト</small></div><span class="menu-item-price">$19</span></div><p class="menu-item-desc">Bright yuzu curd in a toasted sesame shortcrust, topped with shiso meringue and candied citrus.</p><div class="menu-tags"><span class="tag tag-veg">Vegetarian</span></div></div></div>
+      <div class="menu-item reveal reveal-delay-3"><div class="menu-item-img"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=300&q=80" alt="Ice Cream" loading="lazy" /></div><div class="menu-item-body"><div class="menu-item-top"><div class="menu-item-name">Artisan Ice Cream<small>アイスクリーム</small></div><span class="menu-item-price">$14</span></div><p class="menu-item-desc">Two scoops from our rotating selection: black sesame, Hokkaido milk, sakura, or salted caramel.</p><div class="menu-tags"><span class="tag tag-veg">Vegetarian</span><span class="tag tag-gf">Gluten-Free</span></div></div></div>
+    </div>
+  </div>
+
+  <div id="drinks" class="menu-section" data-category="drinks">
+    <div class="menu-section-header"><h2>Sake & Drinks</h2><span>日本酒・飲み物</span></div>
+    <div class="menu-items-grid">
+      <div class="menu-item reveal"><div class="menu-item-img"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&q=80" alt="Sake" loading="lazy" /></div><div class="menu-item-body"><div class="menu-item-top"><div class="menu-item-name">Sake Pairing Flight<small>日本酒ペアリング</small></div><span class="menu-item-price">$95 / person</span></div><p class="menu-item-desc">Six curated sakes paired with each course of the omakase by our certified sake sommelier.</p><div class="menu-tags"><span class="tag tag-special">Sommelier's Choice</span></div></div></div>
+      <div class="menu-item reveal reveal-delay-1"><div class="menu-item-img"><img src="https://images.unsplash.com/photo-1560526860-1f0e56046c85?w=300&q=80" alt="Whisky" loading="lazy" /></div><div class="menu-item-body"><div class="menu-item-top"><div class="menu-item-name">Japanese Whisky Flight<small>ウイスキーフライト</small></div><span class="menu-item-price">$68</span></div><p class="menu-item-desc">Three pours: Hibiki Harmony, Nikka Coffey Grain, and a single cask surprise selection.</p><div class="menu-tags"><span class="tag tag-special">Rare Selection</span></div></div></div>
+      <div class="menu-item reveal reveal-delay-2"><div class="menu-item-img"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=300&q=80" alt="Matcha" loading="lazy" /></div><div class="menu-item-body"><div class="menu-item-top"><div class="menu-item-name">Ceremonial Matcha<small>抒茶</small></div><span class="menu-item-price">$14</span></div><p class="menu-item-desc">Uji ceremonial grade matcha whisked tableside, served with a seasonal wagashi sweet.</p><div class="menu-tags"><span class="tag tag-veg">Vegetarian</span><span class="tag tag-gf">Gluten-Free</span></div></div></div>
+      <div class="menu-item reveal reveal-delay-3"><div class="menu-item-img"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=300&q=80" alt="Cocktail" loading="lazy" /></div><div class="menu-item-body"><div class="menu-item-top"><div class="menu-item-name">Sakura Cocktail<small>桜カクテル</small></div><span class="menu-item-price">$22</span></div><p class="menu-item-desc">Yuzu sake, elderflower, lychee, shiso leaf, and sparkling water. Light, floral, and elegant.</p><div class="menu-tags"><span class="tag tag-veg">Vegetarian</span></div></div></div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="nav-logo"><span class="nav-logo-en">Sakura Omakase</span><span class="nav-logo-jp">桜 おまかせ</span></a><p>An intimate 12-seat Japanese omakase experience in the heart of New York City's West Village.</p></div>
+      <div class="footer-col"><h5>Navigation</h5><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="menu.html">Menu</a></li><li><a href="reservation.html">Reservations</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h5>Menu Categories</h5><ul><li><a href="#omakase">Omakase Sets</a></li><li><a href="#appetizer">Appetizers</a></li><li><a href="#sashimi">Sashimi</a></li><li><a href="#sushi">Nigiri & Rolls</a></li><li><a href="#drinks">Sake & Drinks</a></li></ul></div>
+      <div class="footer-col"><h5>Contact & Hours</h5><div class="sidebar-info"><div class="footer-info-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>42 West Village Blvd, New York, NY 10014</span></div><div class="footer-info-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Tue–Sun: 6 PM – 11 PM</span></div></div></div>
+    </div>
+    <div class="footer-bottom"><span>© 2025 Sakura Omakase. All rights reserved.</span><span>Prices and availability subject to change. Menu items rotate seasonally.</span></div>
+  </div>
+</footer>
+
+<a class="whatsapp-float" data-whatsapp aria-label="Chat on WhatsApp">
+  <span class="wa-tooltip">Chat on WhatsApp</span>
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<script src="js/main.js"></script>
+</body>
+</html>
