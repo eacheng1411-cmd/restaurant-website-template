@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reservations — Sakura Omakase</title>
+  <meta name="description" content="Reserve your seat at Sakura Omakase — New York's premier Japanese fine dining experience. Book online or via WhatsApp." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect fill='%23080808' width='32' height='32'/><text y='24' x='4' font-size='22'>🌸</text></svg>" />
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><span class="nav-logo-en">Sakura Omakase</span><span class="nav-logo-jp">桜 おまかせ</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="reservation.html" class="active">Reservations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="reservation.html" class="btn btn-outline nav-reserve"><span>Reserve a Table</span></a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div id="mobile-menu">
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="menu.html">Menu</a>
+  <a href="reservation.html">Reservations</a><a href="contact.html">Contact</a>
+  <a href="reservation.html" class="btn btn-primary mobile-reserve"><span>Reserve a Table</span></a>
+</div>
+
+<section class="reservation-hero">
+  <div class="container">
+    <div class="reservation-hero-content page-hero-content">
+      <span class="section-label">Reserve Your Table</span>
+      <h1>An Evening <em class="text-gold italic">Reserved</em> for You</h1>
+      <p style="color:var(--text-muted); margin-top:0.8rem;">We seat up to 12 guests per service. Reservations are strongly recommended 2–4 weeks in advance.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="container">
+    <div class="reservation-layout">
+      <div>
+        <div class="booking-form-wrap">
+          <h3>Book Your Seat</h3>
+          <p>Complete the steps below. A confirmation will be sent to your email.</p>
+          <div class="booking-steps">
+            <div class="step-indicator active"><div class="step-num">1</div><span>Date & Time</span></div>
+            <div style="flex:1; display:flex; align-items:center; padding:0 0.5rem;"><div style="height:1px; width:100%; background:var(--border-soft);"></div></div>
+            <div class="step-indicator"><div class="step-num">2</div><span>Your Details</span></div>
+            <div style="flex:1; display:flex; align-items:center; padding:0 0.5rem;"><div style="height:1px; width:100%; background:var(--border-soft);"></div></div>
+            <div class="step-indicator"><div class="step-num">3</div><span>Confirm</span></div>
+          </div>
+
+          <div class="booking-step">
+            <div class="form-group">
+              <label class="form-label">Select Date</label>
+              <div class="calendar-wrap">
+                <div class="calendar-header">
+                  <button class="cal-nav" id="cal-prev" aria-label="Previous month"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 18l-6-6 6-6"/></svg></button>
+                  <span class="cal-month" id="cal-month"></span>
+                  <button class="cal-nav" id="cal-next" aria-label="Next month"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18l6-6-6-6"/></svg></button>
+                </div>
+                <div class="calendar-grid" id="cal-grid">
+                  <div class="cal-day-name">Su</div><div class="cal-day-name">Mo</div><div class="cal-day-name">Tu</div>
+                  <div class="cal-day-name">We</div><div class="cal-day-name">Th</div><div class="cal-day-name">Fr</div><div class="cal-day-name">Sa</div>
+                </div>
+              </div>
+              <div style="font-size:0.78rem; color:var(--text-dim); margin-top:0.4rem;">✦ We are closed on Mondays. Seatings available Tuesday – Sunday.</div>
+              <div style="margin-top:0.8rem; padding:0.8rem 1rem; background:var(--black); border:1px solid var(--border-soft); font-size:0.82rem; color:var(--text-muted);">Selected: <span id="selected-date" style="color:var(--gold);">&#8212;</span></div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Select Time</label>
+              <div class="time-slots">
+                <div class="time-slot">5:30 PM</div><div class="time-slot">6:00 PM</div>
+                <div class="time-slot">6:30 PM</div><div class="time-slot unavailable">7:00 PM</div>
+                <div class="time-slot">7:30 PM</div><div class="time-slot">8:00 PM</div>
+                <div class="time-slot unavailable">8:30 PM</div><div class="time-slot">9:00 PM</div>
+              </div>
+              <div style="font-size:0.72rem; color:var(--text-dim);">Greyed-out times are unavailable. Each seating lasts approximately 3 hours.</div>
+              <div style="margin-top:0.8rem; padding:0.8rem 1rem; background:var(--black); border:1px solid var(--border-soft); font-size:0.82rem; color:var(--text-muted);">Selected time: <span id="selected-time" style="color:var(--gold);">&#8212;</span></div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="guest-count">Number of Guests</label>
+              <select class="form-input" id="guest-count">
+                <option value="">Select party size</option>
+                <option value="1 Guest">1 Guest</option><option value="2 Guests">2 Guests</option>
+                <option value="3 Guests">3 Guests</option><option value="4 Guests">4 Guests</option>
+                <option value="5 Guests">5 Guests</option><option value="6 Guests">6 Guests</option>
+                <option value="7–12 Guests (Private)">7–12 Guests (Private Dining Room)</option>
+              </select>
+              <div style="font-size:0.72rem; color:var(--text-dim); margin-top:0.4rem;">For parties of 7 or more, our private dining room is reserved exclusively for you.</div>
+            </div>
+            <button class="btn btn-primary" style="width:100%; justify-content:center;" data-next-step="1">
+              <span>Continue to Guest Details</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+
+          <div class="booking-step" style="display:none;">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="guest-name">Full Name</label>
+                <input type="text" class="form-input" id="guest-name" placeholder="Your full name" autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="guest-phone">Phone Number</label>
+                <input type="tel" class="form-input" id="guest-phone" placeholder="+1 (555) 000-0000" autocomplete="tel" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="guest-email">Email Address</label>
+              <input type="email" class="form-input" id="guest-email" placeholder="your@email.com" autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="occasion">Special Occasion</label>
+              <select class="form-input" id="occasion">
+                <option value="">None</option><option>Birthday</option><option>Anniversary</option>
+                <option>Business Dinner</option><option>Proposal</option><option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="dietary">Dietary Restrictions or Allergies</label>
+              <textarea class="form-input" id="dietary" rows="3" placeholder="Please list any allergies, dietary restrictions, or special requests…"></textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="notes">Additional Notes</label>
+              <textarea class="form-input" id="notes" rows="3" placeholder="Seating preferences, accessibility needs, or anything else we should know…"></textarea>
+            </div>
+            <div style="background:var(--black); border:1px solid var(--border-soft); padding:1rem; margin-bottom:1.5rem; font-size:0.8rem; color:var(--text-muted); line-height:1.7;">
+              <strong style="color:var(--gold-light); display:block; margin-bottom:0.4rem;">Deposit Policy</strong>
+              A non-refundable deposit equal to the prix fixe price ($295/person for the full Sakura Omakase) will be charged to confirm your booking. This is applied in full to your bill on the evening of your visit.
+            </div>
+            <div style="display:flex; gap:1rem;">
+              <button class="btn btn-ghost" data-prev-step="0"><span>← Back</span></button>
+              <button class="btn btn-primary" style="flex:1; justify-content:center;" data-next-step="2"><span>Review & Confirm</span></button>
+            </div>
+          </div>
+
+          <div class="booking-step" style="display:none;">
+            <h4 style="margin-bottom:1.5rem; color:var(--gold-light);">Review Your Reservation</h4>
+            <div class="confirm-summary">
+              <div class="confirm-row"><span>Date</span><span id="sum-date" style="color:var(--cream);">&#8212;</span></div>
+              <div class="confirm-row"><span>Time</span><span id="sum-time" style="color:var(--cream);">&#8212;</span></div>
+              <div class="confirm-row"><span>Guests</span><span id="sum-guests" style="color:var(--cream);">&#8212;</span></div>
+            </div>
+            <div style="margin-bottom:1.5rem;">
+              <label class="form-label">Payment Method for Deposit</label>
+              <select class="form-input">
+                <option>Credit Card (Visa, Mastercard, Amex)</option>
+                <option>Apple Pay</option><option>Google Pay</option>
+              </select>
+              <div style="font-size:0.72rem; color:var(--text-dim); margin-top:0.5rem;">✦ Payment is processed securely. Your card will not be charged until you click "Complete Reservation."</div>
+            </div>
+            <div style="display:flex; align-items:flex-start; gap:0.7rem; margin-bottom:1.5rem;">
+              <input type="checkbox" id="terms" style="margin-top:3px; accent-color:var(--gold);" />
+              <label for="terms" style="font-size:0.78rem; color:var(--text-muted); cursor:pointer;">I understand the cancellation policy. Deposits are non-refundable. Cancellations made less than 48 hours before the reservation are subject to the full prix fixe charge.</label>
+            </div>
+            <div style="display:flex; gap:1rem;">
+              <button class="btn btn-ghost" data-prev-step="1"><span>← Back</span></button>
+              <button class="btn btn-primary" id="submit-booking" style="flex:1; justify-content:center;">
+                <span>Complete Reservation</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6L9 17l-5-5"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="booking-confirm" class="booking-confirm">
+          <div class="confirm-icon">🌸</div>
+          <h3 style="font-size:2rem; margin-bottom:0.5rem;">Reservation Confirmed</h3>
+          <p style="color:var(--text-muted);">ご予約ありがとうございます — Thank you, we look forward to welcoming you.</p>
+          <div class="confirm-summary">
+            <div class="confirm-row"><span>Name</span><span id="confirm-name">—</span></div>
+            <div class="confirm-row"><span>Date</span><span id="confirm-date">—</span></div>
+            <div class="confirm-row"><span>Time</span><span id="confirm-time">—</span></div>
+            <div class="confirm-row"><span>Guests</span><span id="confirm-guests">—</span></div>
+            <div class="confirm-row"><span>Phone</span><span id="confirm-phone">—</span></div>
+          </div>
+          <p style="font-size:0.82rem; color:var(--text-dim); margin-top:1rem;">A confirmation email has been sent. Please arrive 10 minutes before your seating. The address is 42 West Village Blvd, New York, NY 10014.</p>
+          <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-top:2rem;">
+            <a href="index.html" class="btn btn-outline"><span>Back to Home</span></a>
+            <button class="btn btn-whatsapp" data-whatsapp>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              <span>Chat Us on WhatsApp</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="reservation-sidebar">
+        <div class="sidebar-card">
+          <h4>Restaurant Info</h4>
+          <div class="sidebar-info">
+            <div class="sidebar-info-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>42 West Village Blvd<br>New York, NY 10014</span></div>
+            <div class="sidebar-info-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .9h3a2 2 0 012 1.72c.12.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0122 16.92z"/></svg><span>+1 (555) 123-4567</span></div>
+            <div class="sidebar-info-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><div><div>Tue–Thu: 6:00 PM – 9:30 PM</div><div>Fri–Sat: 5:30 PM – 10:00 PM</div><div>Sunday: 6:00 PM – 9:00 PM</div><div style="color:var(--gold); margin-top:0.3rem;">Closed Mondays</div></div></div>
+            <div class="sidebar-info-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>reserve@sakuraomakase.com</span></div>
+          </div>
+        </div>
+        <div class="sidebar-card">
+          <h4>Reservation Policies</h4>
+          <div class="policy-list">
+            <div class="policy-item">Full price deposit required at time of booking.</div>
+            <div class="policy-item">Cancellations 48+ hours in advance receive a credit.</div>
+            <div class="policy-item">Late arrivals (15+ min) may forfeit their seating.</div>
+            <div class="policy-item">Children 12+ welcome. Not suitable for infants.</div>
+            <div class="policy-item">Smart casual attire preferred. No open-toed shoes.</div>
+            <div class="policy-item">Private dining available for groups of 7–12.</div>
+          </div>
+        </div>
+        <div class="whatsapp-card">
+          <p>Prefer to book by message? Our team responds within 30 minutes during business hours.</p>
+          <button class="btn btn-whatsapp" data-whatsapp style="width:100%; justify-content:center;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <span>Book via WhatsApp</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="nav-logo"><span class="nav-logo-en">Sakura Omakase</span><span class="nav-logo-jp">桜 おまかせ</span></a><p>An intimate 12-seat Japanese omakase experience in the heart of New York City's West Village.</p></div>
+      <div class="footer-col"><h5>Navigation</h5><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="menu.html">Menu</a></li><li><a href="reservation.html">Reservations</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h5>Dining Options</h5><ul><li><a href="menu.html#omakase">Full Omakase — $295</a></li><li><a href="menu.html#omakase">Kaiseki Set — $185</a></li><li><a href="menu.html#omakase">Sushi Omakase — $220</a></li><li><a href="menu.html#order">Online Takeout</a></li></ul></div>
+      <div class="footer-col"><h5>Contact</h5><div class="sidebar-info"><div class="footer-info-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>42 West Village Blvd, New York, NY 10014</span></div><div class="footer-info-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Tue–Sun: 6 PM – 11 PM</span></div></div></div>
+    </div>
+    <div class="footer-bottom"><span>© 2025 Sakura Omakase. All rights reserved.</span><span>42 West Village Blvd, New York, NY 10014</span></div>
+  </div>
+</footer>
+
+<a class="whatsapp-float" data-whatsapp aria-label="Chat on WhatsApp">
+  <span class="wa-tooltip">Book via WhatsApp</span>
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<script src="js/main.js"></script>
+</body>
+</html>
